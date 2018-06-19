@@ -11,15 +11,9 @@ class Solution(object):
         if not nums:
             return 0
         if len(nums) == 2:
-            if nums[0] > nums[1]:
-                return nums[0]
-            else:
-                return nums[1]
+            return nums[0] if nums[0] > nums[1] else nums[1]
         temp = self.findMax(nums[1:])
-        if nums[0] > temp:
-            return nums[0]
-        else:
-            return temp
+        return nums[0] if nums[0] > temp else temp
 
 
 def main():
