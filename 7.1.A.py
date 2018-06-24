@@ -2,27 +2,39 @@
 graph = {}
 
 graph["start"] = {}
-graph["start"]["a"] = 6
-graph["start"]["b"] = 2
+graph["start"]["a"] = 5
+graph["start"]["c"] = 2
 
 graph["a"] = {}
-graph["a"]["fin"] = 1
+graph["a"]["b"] = 4
+graph["a"]["d"] = 2
 
 graph["b"] = {}
-graph["b"]["a"] = 3
-graph["b"]["fin"] = 5
+graph["b"]["d"] = 6
+graph["b"]["fin"] = 3
+
+graph["c"] = {}
+graph["c"]["a"] = 8
+graph["c"]["d"] = 7
+
+graph["d"] = {}
+graph["d"]["fin"] = 1
 
 graph["fin"] = {}
 
 infinity = float("inf")
 costs = {}
 costs["a"] = 6
-costs["b"] = 2
+costs["b"] = infinity
+costs["c"] = 2
+costs["d"] = infinity
 costs["fin"] = infinity
 
 parents = {}
 parents["a"] = "start"
-parents["b"] = "start"
+parents["b"] = None
+parents["c"] = "start"
+parents["d"] = None
 parents["fin"] = None
 
 processed = []
